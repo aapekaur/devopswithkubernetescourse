@@ -7,5 +7,5 @@ length = 64
 random_string = "".join(random.choices(string.ascii_letters + string.digits, k=length))
 
 while True:
-    print(datetime.datetime.now(), random_string)
+    print(datetime.datetime.now(), random_string, flush=True)
     time.sleep(5)

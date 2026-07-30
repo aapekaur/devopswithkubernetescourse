@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: # https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: log-output
+spec:
+  selector:
+    matchLabels:
+      app: log-output
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: log-output
+    spec:
+      containers:
+        - name: log-output
+          image: aapekaur/devopswithkub11:first
